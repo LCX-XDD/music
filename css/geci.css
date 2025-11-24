@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* 显示歌词行数 */
+    --lines: 7;
+    /* 行高 */
+    --line-height: 2.5rem;
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    color: #ffffff;
+    text-align: center;
+
+}
+
+.container {
+    height: calc(var(--line-height) * var(--lines));
+    overflow: hidden;
+}
+
+.lrc {
+    transition: .3s;
+}
+
+li {
+    /* 行高 */
+    height: var(--line-height);
+    line-height: var(--line-height);
+    font-size: 1.2rem;
+    transition: .2s;
+    letter-spacing: .25rem;
+}
+
+li.active {
+    color: #000000;
+    transform: scale(1.3);
+}

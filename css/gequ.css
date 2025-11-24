@@ -1,0 +1,275 @@
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p {
+	margin: 0;
+	padding: 0;
+}
+ul,
+ol {
+	list-style: outside none none;
+}
+.a1 {
+	text-decoration: none;
+    animation: 2s my-animation2 infinite;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+a {
+	text-decoration: none;
+}
+#toubu {
+	width: 1845px;
+	height: 60px;
+	overflow: hidden;
+	margin: 20px auto;
+	margin-bottom: 100px;
+	display: flex;
+	justify-content: space-between;
+	position: sticky;
+	top: 0px;
+	background-color: #888888;
+	box-shadow: 0px 5px 5px 2px  rgba(0, 0, 0, 0.5);
+	border-radius:35px 35px 0px 35px;
+	z-index: 1;
+	background: rgba(255, 255, 255, 0);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	/*模糊玻璃*/
+}
+.logo{
+	width: 20px;
+	margin: auto;
+	margin-right: 10px;
+}
+#toubu .div_01 {
+	line-height: 60px;
+	font-size: 20px;
+	font-weight: bold;
+    animation: 2s my-animation2 infinite;
+	/*添加动画*/
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+	margin: 0px 10px;
+}
+/*定义动画*/
+@keyframes my-animation2 {
+    from {
+        color: rgb(255, 0, 0);
+    }
+    to {
+        color: rgb(0, 0, 255);
+    }
+}
+#toubu .div_02 ul li {
+	display: inline-block;
+	line-height: 60px;
+}
+.ma{
+	margin: 0px 18px;
+}
+#toubu .div_02 ul li a {
+	display: block;
+	width: 80px;
+	line-height: 60px;
+	color: #000;
+	font-size: 16px;
+	text-align: center;
+}
+#toubu .div_02 ul a.actives{
+	animation: 1s my-animation3 infinite ;
+    animation-direction: alternate;
+	border-radius:35px 35px 0px 35px;
+    transition-timing-function: linear;
+	transition-property: color;
+}
+@keyframes my-animation3 {
+    from {
+        background-color: rgba(128, 128, 128,0.5);
+    }
+    to {
+        background-color: rgba(255, 255, 255 , 0.5);
+    }
+}
+#toubu .div_02 ul li a:hover,.play a.actives {
+    animation: 1s my-animation4 infinite ;
+    animation-direction: alternate;
+	border-radius:35px 35px 0px 35px;
+    transition-timing-function: linear;
+	transition-property: color;
+}
+@keyframes my-animation4 {
+    from {
+        background-color: rgba(128, 128, 128,0.5);
+    }
+    to {
+        background-color: rgba(255, 255, 255 , 0.5);
+    }
+}
+.inbanner {
+	line-height: 300px;
+	color: #fff;
+	font-size: 30px;
+	font-family:"STHupo";
+	text-align: center;
+	height: 300px;
+	background-size: cover;
+	width: 970px;
+	margin: 0px auto;
+	color: #fff;
+	border-radius: 50px 50px 0px 50px;
+	box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.24);
+	background: rgba(255, 255, 255, 0);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+h1{
+    animation: 2s my-animation2 infinite;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+	text-shadow: rgb(128, 128, 128) 10px 0 10px;
+	font-size: 5em;
+	font-weight: 100;
+}
+.list-1{
+	width: 1000px;
+	margin: 0 auto;
+}
+.list-1 ul li{
+	position: relative;
+	width: 50%;
+	float: left;
+	box-sizing: border-box;
+	height: 300px;
+	margin-top: 40px;
+	
+}
+.list-1 ul li img{
+	width: 95%;
+	height: 220px;
+	object-fit: cover;
+	transition: all 1s;
+	border-radius:50px 50px 0px 50px;
+	box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.5);
+}
+.list-1 ul li img:hover{
+	width: 95%;
+	height: 220px;
+	object-fit: cover;
+	transform: scale(1.1);
+}
+.list-1 ul li p{
+	width: 300px;
+	background-color: #000;
+	border-radius:50px 50px 0px 50px;
+	background: rgba(255, 255, 255, 0);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	box-shadow: 0px 3px 10px 2px;
+	font-size: 18px;
+	text-align: center;
+	margin-top: 20px;
+	margin: 10px 100px;
+	animation: 2s my-animation2 infinite;
+}
+.list-1 ul li .a1{
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	background: rgba(255, 255, 255, 0);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	border-radius:50px 50px 0px 50px;
+	display: inline-block;
+	color: #fff;
+	margin-top: 20px;
+	margin: 15px 200px;
+	box-shadow: 0px 3px 10px 2px;
+	transition: all 1s;
+}
+.list-1 ul li .a1:hover{
+	transform: scale(1.1);
+}
+#jiaobu {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	text-align: center;
+	font-size: 14px;
+	padding: 30px 0;
+}
+
+#jiaobu p {
+	line-height: 1.8;
+}
+#jiaobu {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	text-align: center;
+	font-size: 14px;
+	padding: 30px 0;
+}
+.foot{
+	width: 100%;
+	height: 250px;
+	background-color: rgba(128, 128, 128, 0.5);
+	margin-top: 40px;
+	margin-bottom: -25px;
+	border-radius:40px 40px 0px 40px;
+}
+.foot1{
+	font-size: 1.5em;
+	color: rgb(128, 128, 128);
+	text-align: center;
+}
+.foot1 p{
+	padding: 50px;
+	text-align: center;
+}
+.foot2{
+	font-size: 1em;
+	color:rgb(128, 128, 128) ;
+	text-align: center;
+}
+.foot2 p{
+	padding: 40px;
+	text-align: center;
+}
+hr{
+	width: 1000px;
+	margin: 0px auto;
+}
+.radial-gradient-demo {
+    background-color: #31f1f1; 
+    background-image: radial-gradient(closest-side, rgb(112, 122, 255), rgba(35, 149, 255, 0)), radial-gradient(closest-side, rgb(250, 144, 184), rgba(197, 192, 195, 0)), radial-gradient(closest-side, rgb(138, 241, 74), rgba(254, 234, 131, 0)), radial-gradient(closest-side, rgb(255, 188, 100), rgba(170, 142, 245, 0));
+    background-size: 130vw 130vh, 120vw 120vh, 100vw 150vh, 120vw 130vh;
+    background-position: -80vw -80vh, 30vw -20vh, -20vw 20vh, 30vw 20vh;
+    background-repeat: no-repeat;
+    animation: 15s moiveAnimation infinite;
+}
+
+@keyframes moiveAnimation {
+    0%,
+    100% {
+        background-size: 130vw 130vh, 120vw 120vh, 100vw 150vh, 120vw 130vh;
+        background-position: -80vw -80vh, 30vw -20vh, -20vw 20vh, 30vw 20vh;
+    }
+    25% {
+        background-size: 120vw 120vh, 130vw 150vh, 130vw 120vh, 100vw 110vh;
+        background-position: -30vw -30vh, 40vw -10vh, 0vw 10vh, -10vw 20vh;
+    }
+    50% {
+        background-size: 130vw 130vh, 140vw 100vh, 100vw 150vh, 90vw 110vh;
+        background-position: 10vw -60vh, 20vw 10vh, 10vw 30vh, 10vw -20vh;
+    }
+    75% {
+        background-size: 140vw 140vh, 100vw 130vh, 100vw 150vh, 130vw 110vh;
+        background-position: -70vw -70vh, 0vw -10vh, 30vw -20vh, 20vw 30vh;
+    }
+}

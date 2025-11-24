@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol {
+	list-style: outside none none;
+}
+
+a {
+	text-decoration: none;
+}
+
+#toubu {
+	width: 1000px;
+	height: 60px;
+	overflow: hidden;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+#toubu .div_01 {
+	line-height: 60px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#toubu .div_02 ul li {
+	display: inline-block;
+	line-height: 60px;
+}
+
+#toubu .div_02 ul li a {
+	display: block;
+	width: 80px;
+	line-height: 60px;
+	color: #000;
+	font-size: 16px;
+	text-align: center;
+}
+
+#toubu .div_02 ul li a:hover,.play a.actives {
+	background: #67f3e7;
+}
+html,body{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-family: PingFang SC,Microsoft YaHei, Helvitica, Verdana,Tohoma, Arial,san-serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    outline: none;
+}
+
+/*登录开始*/
+.login_box{
+    width: 1200px;
+    margin: 150px auto;
+    height: auto;
+    overflow: hidden;
+}   /*包裹全部元素的大盒子*/
+
+/*登录注册模块*/
+
+.fr{
+    float: left;
+}   /*class为fr的靠左对齐*/
+
+.login_b2{
+    padding: 0px 60px;
+    width: 360px;
+    height: 540px;
+    background-color: #ffffff00;
+    overflow: hidden;
+    position: absolute;
+    left: 30%   ;
+}   /*包裹登录模块的大盒子*/
+
+/*登录注册模块列表*/
+.login_b2_ul{
+    width: 360px;
+    padding-top: 34px;
+    font-size: 24px;
+    text-align: center;
+    color: #545454;
+}   /*包裹 登录 注册的小盒子*/
+
+.login_b2_ul>li{
+    width: 50%;
+    float: left;
+    line-height: 66px;
+    border-bottom: 2px solid #888888;
+    cursor: pointer;
+}   /*li继承login_b2_ul属性*/
+
+.login_b2_ul>li:hover,.login_b2_ul>li.active{
+    color: #0e805c;
+    font-weight: bold;
+    border-bottom: 4px solid #387e48;
+}   /*为登录注册添加鼠标经过效果*/
+
+/*登陆注册模块表单控件*/
+.login_b2 input{
+    width: 360px;
+    height: 46px;
+    line-height: 46px;
+    color: #a4a4a4;
+    font-size: 16px;
+    border: 1px solid #000;
+    margin-top: 30px;
+    border-radius: 25px;
+    text-indent: 10px;
+    background-color: #ffffff00;
+}   /*为输入框添加属性*/
+
+.login_b2 input:focus{
+    border-bottom: 2px solid #000;
+}
+.login_b2_span{
+    color: #7c7979;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.login_btn{
+    width: 360px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 22px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 100px;
+}
+.popup_box_1 {
+    border: 0px;
+    user-select: none;
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #16CA82;
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 55px 80px 20px;
+}
+.popup_box_2{
+    font-size: 14px;
+    padding-left: 200px;
+    height: 20px;
+    line-height: 30px;
+    text-align: left;
+    user-select: none;
+}
+/*登录结束*/
+.radial-gradient-demo {
+    background-color: #31f1f1; 
+    background-image: radial-gradient(closest-side, rgb(112, 122, 255), rgba(35, 149, 255, 0)), radial-gradient(closest-side, rgb(250, 144, 184), rgba(197, 192, 195, 0)), radial-gradient(closest-side, rgb(138, 241, 74), rgba(254, 234, 131, 0)), radial-gradient(closest-side, rgb(255, 188, 100), rgba(170, 142, 245, 0));
+    background-size: 130vw 130vh, 120vw 120vh, 100vw 150vh, 120vw 130vh;
+    background-position: -80vw -80vh, 30vw -20vh, -20vw 20vh, 30vw 20vh;
+    background-repeat: no-repeat;
+    animation: 15s moiveAnimation infinite;
+}
+#jiaobu {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	text-align: center;
+	font-size: 14px;
+	padding: 30px 0;
+}
+
+#jiaobu p {
+	line-height: 1.8;
+}
+#jiaobu {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	text-align: center;
+	font-size: 14px;
+	padding: 30px 0;
+}
+.foot{
+	width: 100%;
+	height: 250px;
+	background-color: rgba(128, 128, 128, 0.5);
+	margin-top: 40px;
+	margin-bottom: -25px;
+	border-radius:40px 40px 0px 40px;
+}
+.foot1{
+	font-size: 1.5em;
+	color: rgb(128, 128, 128);
+	text-align: center;
+}
+.foot1 p{
+	padding: 50px;
+	text-align: center;
+}
+.foot2{
+	font-size: 1em;
+	color:rgb(128, 128, 128) ;
+	text-align: center;
+}
+.foot2 p{
+	padding: 40px;
+	text-align: center;
+}
+hr{
+	width: 1000px;
+	margin: 0px auto;
+}
+.radial-gradient-demo {
+    background-color: #31f1f1; 
+    background-image: radial-gradient(closest-side, rgb(112, 122, 255), rgba(35, 149, 255, 0)), radial-gradient(closest-side, rgb(250, 144, 184), rgba(197, 192, 195, 0)), radial-gradient(closest-side, rgb(138, 241, 74), rgba(254, 234, 131, 0)), radial-gradient(closest-side, rgb(255, 188, 100), rgba(170, 142, 245, 0));
+    background-size: 130vw 130vh, 120vw 120vh, 100vw 150vh, 120vw 130vh;
+    background-position: -80vw -80vh, 30vw -20vh, -20vw 20vh, 30vw 20vh;
+    background-repeat: no-repeat;
+    animation: 15s moiveAnimation infinite;
+}
+@keyframes moiveAnimation {
+    0%,
+    100% {
+        background-size: 130vw 130vh, 120vw 120vh, 100vw 150vh, 120vw 130vh;
+        background-position: -80vw -80vh, 30vw -20vh, -20vw 20vh, 30vw 20vh;
+    }
+    25% {
+        background-size: 120vw 120vh, 130vw 150vh, 130vw 120vh, 100vw 110vh;
+        background-position: -30vw -30vh, 40vw -10vh, 0vw 10vh, -10vw 20vh;
+    }
+    50% {
+        background-size: 130vw 130vh, 140vw 100vh, 100vw 150vh, 90vw 110vh;
+        background-position: 10vw -60vh, 20vw 10vh, 10vw 30vh, 10vw -20vh;
+    }
+    75% {
+        background-size: 140vw 140vh, 100vw 130vh, 100vw 150vh, 130vw 110vh;
+        background-position: -70vw -70vh, 0vw -10vh, 30vw -20vh, 20vw 30vh;
+    }
+}
