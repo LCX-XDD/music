@@ -1,23 +1,25 @@
-
 a {
 	text-decoration: none;
 }
+/* 头部导航 - 自适应修改 */
 #toubu {
-	width: 1845px;
+	width: 95% !important;
+	max-width: 1845px !important;
 	height: 60px;
 	overflow: hidden;
-	margin: 20px auto;
-	margin-bottom: 100px;
+	margin: 20px auto !important;
+	margin-bottom: 50px !important;
 	display: flex;
 	justify-content: space-between;
 	position: sticky;
 	top: 0px;
-	box-shadow: 0px 5px 5px 2px  rgba(0, 0, 0, 0.5);
-	border-radius:35px 35px 0px 35px;
-	z-index: 1;
+	box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.5);
+	border-radius: 35px 35px 0px 35px;
+	z-index: 999;
 	background: rgba(255, 255, 255, 0);
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
+	padding: 0 15px;
 }
 .logo{
 	width: 20px;
@@ -26,12 +28,14 @@ a {
 }
 #toubu .div_01 {
 	line-height: 60px;
-	font-size: 20px;
+	font-size: clamp(16px, 3vw, 20px);
 	font-weight: bold;
     animation: 2s my-animation infinite;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-	margin: 0px 20px;
+	margin: 0px clamp(10px, 2vw, 20px);
+	display: flex;
+	align-items: center;
 }
 @keyframes my-animation {
     from {
@@ -41,19 +45,24 @@ a {
         color: rgb(0, 0, 255);
     }
 }
+#toubu .div_02 ul {
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
 #toubu .div_02 ul li {
 	display: inline-block;
 	line-height: 60px;
 }
 .ma{
-	margin: 0px 18px;
+	margin: 0px clamp(8px, 2vw, 18px);
 }
 #toubu .div_02 ul li a {
 	display: block;
-	width: 80px;
+	width: clamp(60px, 8vw, 80px);
 	line-height: 60px;
 	color: #000;
-	font-size: 16px;
+	font-size: clamp(14px, 2vw, 16px);
 	text-align: center;
 }
 #toubu .div_02 ul a.actives{
@@ -86,36 +95,40 @@ a {
         background-color: rgba(255, 255, 255 , 0.5);
     }
 }
+/* 主体容器 - 自适应修改 */
 .tin{
-	width: 400px;
+	width: clamp(280px, 80%, 400px);
 	margin: 10px auto;
+	text-align: center;
 }
 .tai{
-	width: 1000px;
+	width: clamp(300px, 90%, 1000px);
 	margin: 0px auto;
 	border-radius:50px 50px 0px 50px;
-	box-shadow: 0px 0px 1000px 20px  rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.3);
 	background: rgba(255, 255, 255, 0);
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
+	padding: 0 20px;
 }
 .tin p{
-	font-size: 2em;
+	font-size: clamp(1.5em, 4vw, 2em);
 	color: #000;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: clamp(30px, 5vw, 50px);
+	padding-bottom: clamp(30px, 5vw, 50px);
 }
 .tin img{
 	width: 100%;
 	height: auto;
 }
 #hh1{
-	border-radius:200px; 
-	box-shadow: 0px 0px 100px 0px ;
+	border-radius: 50%;
+	box-shadow: 0px 0px 50px 0px;
 	animation:hh1 6s linear 0s infinite;
+	max-width: 300px;
+	margin: 0 auto;
 }
 @keyframes hh1 {
-
 	from{
 		transform: rotate(0deg);
 		color: rgb(255, 0, 0);
@@ -125,13 +138,108 @@ a {
 		color: rgb(0, 0, 255);
 	}
 }
+/* 音频控件 - 核心样式（圆形按钮+蓝红切换+毛玻璃） */
 audio{
-	margin: 0px -140px;
-	width: 700px;
-	border-radius:40px 0px -40px 40px;
-	padding: 5px;
-	margin-bottom: 40px;
+	width: 100% !important;
+	max-width: 700px !important;
+	height: 55px !important;
+	margin: 20px auto 40px !important;
+	padding: 0 !important;
+	border-radius: 30px !important;
+	-webkit-appearance: none !important;
+	appearance: none !important;
+	outline: none !important;
 }
+/* 音频面板（毛玻璃半透明） */
+audio::-webkit-media-controls-panel {
+	background: rgba(255, 255, 255, 0.2) !important;
+	backdrop-filter: blur(10px) !important;
+	-webkit-backdrop-filter: blur(10px) !important;
+	border-radius: 30px !important;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+	border: none !important;
+	padding: 0 20px !important;
+	height: 55px !important;
+}
+/* 播放按钮（蓝色圆形） */
+audio::-webkit-media-controls-play-button {
+	width: 40px !important;
+	height: 40px !important;
+	border-radius: 50% !important;
+	background: #2196f3 !important;
+	color: #fff !important;
+	border: none !important;
+	margin-right: 15px !important;
+	box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3) !important;
+	transition: all 0.2s ease !important;
+}
+/* 暂停按钮（红色圆形） */
+audio::-webkit-media-controls-pause-button {
+	width: 40px !important;
+	height: 40px !important;
+	border-radius: 50% !important;
+	background: #f44336 !important;
+	color: #fff !important;
+	border: none !important;
+	margin-right: 15px !important;
+	box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3) !important;
+	transition: all 0.2s ease !important;
+}
+audio::-webkit-media-controls-play-button:hover {
+	background: #1976d2 !important;
+	transform: scale(1.05) !important;
+}
+audio::-webkit-media-controls-pause-button:hover {
+	background: #d32f2f !important;
+	transform: scale(1.05) !important;
+}
+/* 进度条轨道 */
+audio::-webkit-media-controls-timeline {
+	height: 8px !important;
+	border-radius: 4px !important;
+	background: rgba(255, 255, 255, 0.3) !important;
+	margin: 0 12px !important;
+}
+/* 进度条滑块 */
+audio::-webkit-media-controls-timeline::-webkit-slider-thumb {
+	width: 18px !important;
+	height: 18px !important;
+	border-radius: 50% !important;
+	background: #fff !important;
+	border: 2px solid #2196f3 !important;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+	transition: all 0.2s ease !important;
+}
+audio::-webkit-media-controls-timeline::-webkit-slider-thumb:hover {
+	transform: scale(1.1) !important;
+}
+/* 时间显示 */
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+	font-size: 13px !important;
+	color: #fff !important;
+	font-weight: 500 !important;
+	font-family: "Microsoft YaHei", sans-serif !important;
+}
+/* 音量条 */
+audio::-webkit-media-controls-volume-slider {
+	height: 6px !important;
+	border-radius: 3px !important;
+	background: rgba(255, 255, 255, 0.3) !important;
+	margin: 0 8px !important;
+}
+audio::-webkit-media-controls-volume-slider::-webkit-slider-thumb {
+	width: 14px !important;
+	height: 14px !important;
+	border-radius: 50% !important;
+	background: #fff !important;
+	border: 2px solid #2196f3 !important;
+}
+/* 隐藏全屏按钮 */
+audio::-webkit-media-controls-fullscreen-button {
+	display: none !important;
+}
+/* 页脚 - 自适应修改 */
 #jiaobu {
 	width: 100%;
 	height: auto;
@@ -141,35 +249,43 @@ audio{
 	padding: 30px 0;
 }
 .foot{
-	width: 100%;
-	height: 250px;
+	width: 95% !important;
+	max-width: 1200px !important;
+	height: auto !important;
 	background-color: rgba(128, 128, 128, 0.5);
-	margin-top: 40px;
-	margin-bottom: -25px;
+	margin: 40px auto -25px !important;
 	border-radius:40px 40px 0px 40px;
+	padding: 20px 15px;
 }
 .foot1{
-	font-size: 1.5em;
+	font-size: clamp(1.2em, 3vw, 1.5em);
 	color: rgb(128, 128, 128);
 	text-align: center;
 }
 .foot1 p{
-	padding: 50px;
+	padding: clamp(20px, 5vw, 50px) !important;
 	text-align: center;
+	margin: 0;
 }
 .foot2{
-	font-size: 1em;
+	font-size: clamp(0.9em, 2vw, 1em);
 	color:rgb(128, 128, 128) ;
 	text-align: center;
 }
 .foot2 p{
-	padding: 40px;
+	padding: clamp(15px, 4vw, 40px) !important;
 	text-align: center;
+	margin: 0;
+	line-height: 1.8;
 }
 hr{
-	width: 1000px;
-	margin: 0px auto;
+	width: 90% !important;
+	max-width: 1000px !important;
+	margin: 0px auto !important;
+	border: none;
+	border-top: 1px solid rgba(0,0,0,0.1);
 }
+/* 背景动画 - 保留原有样式 */
 .radial-gradient-demo {
     background-color: #31f1f1; 
     background-image: radial-gradient(closest-side, rgb(112, 122, 255), rgba(35, 149, 255, 0)), radial-gradient(closest-side, rgb(250, 144, 184), rgba(197, 192, 195, 0)), radial-gradient(closest-side, rgb(138, 241, 74), rgba(254, 234, 131, 0)), radial-gradient(closest-side, rgb(255, 188, 100), rgba(170, 142, 245, 0));
@@ -197,4 +313,44 @@ hr{
         background-size: 140vw 140vh, 100vw 130vh, 100vw 150vh, 130vw 110vh;
         background-position: -70vw -70vh, 0vw -10vh, 30vw -20vh, 20vw 30vh;
     }
+}
+/* 小屏幕适配补充 */
+@media (max-width: 576px) {
+	#toubu {
+		flex-wrap: wrap;
+		height: auto;
+		padding: 10px 15px;
+		margin-bottom: 30px !important;
+	}
+	#toubu .div_01 {
+		width: 100%;
+		justify-content: center;
+		margin-bottom: 10px;
+	}
+	#toubu .div_02 ul {
+		width: 100%;
+		justify-content: center;
+	}
+	.tai {
+		border-radius: 30px 30px 0 30px;
+	}
+	#hh1 {
+		max-width: 200px;
+	}
+	.foot {
+		border-radius: 30px 30px 0 30px;
+	}
+	/* 小屏幕音频适配 */
+	audio {
+		height: 50px !important;
+	}
+	audio::-webkit-media-controls-panel {
+		height: 50px !important;
+		padding: 0 15px !important;
+	}
+	audio::-webkit-media-controls-play-button,
+	audio::-webkit-media-controls-pause-button {
+		width: 36px !important;
+		height: 36px !important;
+	}
 }

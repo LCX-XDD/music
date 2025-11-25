@@ -6,57 +6,58 @@ h4,
 ul,
 ol,
 p {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 ul,
 ol {
-	list-style: outside none none;
+    list-style: outside none none;
 }
 .a1 {
-	text-decoration: none;
+    text-decoration: none;
     animation: 2s my-animation2 infinite;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
+
+/* --- MODIFIED: 头部导航栏自适应 --- */
 #toubu {
-	width: 1845px;
-	height: 60px;
-	overflow: hidden;
-	margin: 20px auto;
-	margin-bottom: 100px;
-	display: flex;
-	justify-content: space-between;
-	position: sticky;
-	top: 0px;
-	background-color: #888888;
-	box-shadow: 0px 5px 5px 2px  rgba(0, 0, 0, 0.5);
-	border-radius:35px 35px 0px 35px;
-	z-index: 1;
-	background: rgba(255, 255, 255, 0);
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
-	/*模糊玻璃*/
+    max-width: 1845px;
+    width: 95%;
+    height: 60px;
+    overflow: hidden;
+    margin: 20px auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    background-color: #888888;
+    box-shadow: 0px 5px 5px 2px  rgba(0, 0, 0, 0.5);
+    border-radius:35px 35px 0px 35px;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 .logo{
-	width: 20px;
-	margin: auto;
-	margin-right: 10px;
+    width: 20px;
+    margin: auto;
+    margin-right: 10px;
 }
 #toubu .div_01 {
-	line-height: 60px;
-	font-size: 20px;
-	font-weight: bold;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: bold;
     animation: 2s my-animation2 infinite;
-	/*添加动画*/
     animation-iteration-count: infinite;
     animation-direction: alternate;
-	margin: 0px 10px;
+    margin: 0px 20px;
 }
-/*定义动画*/
 @keyframes my-animation2 {
     from {
         color: rgb(255, 0, 0);
@@ -65,27 +66,31 @@ a {
         color: rgb(0, 0, 255);
     }
 }
+#toubu .div_02 ul {
+    display: flex;
+}
 #toubu .div_02 ul li {
-	display: inline-block;
-	line-height: 60px;
+    /* display: inline-block; */
+    line-height: 60px;
 }
 .ma{
-	margin: 0px 18px;
+    margin: 0px 10px;
 }
 #toubu .div_02 ul li a {
-	display: block;
-	width: 80px;
-	line-height: 60px;
-	color: #000;
-	font-size: 16px;
-	text-align: center;
+    display: block;
+    /* width: 80px; */
+    padding: 0 15px;
+    line-height: 60px;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
 }
 #toubu .div_02 ul a.actives{
-	animation: 1s my-animation3 infinite ;
+    animation: 1s my-animation3 infinite ;
     animation-direction: alternate;
-	border-radius:35px 35px 0px 35px;
+    border-radius:35px 35px 0px 35px;
     transition-timing-function: linear;
-	transition-property: color;
+    transition-property: color;
 }
 @keyframes my-animation3 {
     from {
@@ -98,9 +103,9 @@ a {
 #toubu .div_02 ul li a:hover,.play a.actives {
     animation: 1s my-animation4 infinite ;
     animation-direction: alternate;
-	border-radius:35px 35px 0px 35px;
+    border-radius:35px 35px 0px 35px;
     transition-timing-function: linear;
-	transition-property: color;
+    transition-property: color;
 }
 @keyframes my-animation4 {
     from {
@@ -110,141 +115,155 @@ a {
         background-color: rgba(255, 255, 255 , 0.5);
     }
 }
+
+/* --- MODIFIED: 标题横幅自适应 --- */
 .inbanner {
-	line-height: 300px;
-	color: #fff;
-	font-size: 30px;
-	font-family:"STHupo";
-	text-align: center;
-	height: 300px;
-	background-size: cover;
-	width: 970px;
-	margin: 0px auto;
-	color: #fff;
-	border-radius: 50px 50px 0px 50px;
-	box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.24);
-	background: rgba(255, 255, 255, 0);
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
+    /* line-height: 300px; */
+    color: #fff;
+    font-size: 30px;
+    font-family:"STHupo";
+    text-align: center;
+    height: auto;
+    padding: 100px 20px;
+    background-size: cover;
+    max-width: 970px;
+    width: 95%;
+    margin: 0px auto 40px;
+    color: #fff;
+    border-radius: 50px 50px 0px 50px;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.24);
+    background: rgba(255, 255, 255, 0);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 h1{
     animation: 2s my-animation2 infinite;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-	text-shadow: rgb(128, 128, 128) 10px 0 10px;
-	font-size: 5em;
-	font-weight: 100;
-}
-.list-1{
-	width: 1000px;
-	margin: 0 auto;
-}
-.list-1 ul li{
-	position: relative;
-	width: 50%;
-	float: left;
-	box-sizing: border-box;
-	height: 300px;
-	margin-top: 40px;
-	
-}
-.list-1 ul li img{
-	width: 95%;
-	height: 220px;
-	object-fit: cover;
-	transition: all 1s;
-	border-radius:50px 50px 0px 50px;
-	box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.5);
-}
-.list-1 ul li img:hover{
-	width: 95%;
-	height: 220px;
-	object-fit: cover;
-	transform: scale(1.1);
-}
-.list-1 ul li p{
-	width: 300px;
-	background-color: #000;
-	border-radius:50px 50px 0px 50px;
-	background: rgba(255, 255, 255, 0);
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
-	box-shadow: 0px 3px 10px 2px;
-	font-size: 18px;
-	text-align: center;
-	margin-top: 20px;
-	margin: 10px 100px;
-	animation: 2s my-animation2 infinite;
-}
-.list-1 ul li .a1{
-	width: 100px;
-	height: 30px;
-	text-align: center;
-	line-height: 30px;
-	background: rgba(255, 255, 255, 0);
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
-	border-radius:50px 50px 0px 50px;
-	display: inline-block;
-	color: #fff;
-	margin-top: 20px;
-	margin: 15px 200px;
-	box-shadow: 0px 3px 10px 2px;
-	transition: all 1s;
-}
-.list-1 ul li .a1:hover{
-	transform: scale(1.1);
-}
-#jiaobu {
-	width: 100%;
-	height: auto;
-	overflow: hidden;
-	text-align: center;
-	font-size: 14px;
-	padding: 30px 0;
+    text-shadow: rgb(128, 128, 128) 10px 0 10px;
+    font-size: 5em;
+    font-weight: 100;
+    line-height: 1.2;
 }
 
-#jiaobu p {
-	line-height: 1.8;
+/* --- MODIFIED: 歌曲列表容器自适应 --- */
+.list-1{
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden; /* 清除浮动 */
 }
+/* --- MODIFIED: 歌曲列表项自适应 --- */
+.list-1 ul li{
+    position: relative;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    /* height: 300px; */
+    margin-top: 40px;
+    padding: 0 10px;
+}
+.list-1 ul li img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: all 1s;
+    border-radius:50px 50px 0px 50px;
+    box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.5);
+}
+.list-1 ul li img:hover{
+    /* width: 95%;
+    height: 220px;
+    object-fit: cover; */
+    transform: scale(1.05); /* 略微缩小放大比例 */
+}
+.list-1 ul li p{
+    max-width: 300px;
+    width: 90%;
+    background-color: #000;
+    border-radius:50px 50px 0px 50px;
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 3px 10px 2px;
+    font-size: 18px;
+    text-align: center;
+    margin: 15px auto; /* 水平居中 */
+    padding: 5px 0;
+    animation: 2s my-animation2 infinite;
+}
+.list-1 ul li .a1{
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius:50px 50px 0px 50px;
+    display: block; /* 改为block以便居中 */
+    color: #000; /* 修改颜色，提高可读性 */
+    margin: 15px auto; /* 水平居中 */
+    box-shadow: 0px 3px 10px 2px;
+    transition: all 1s;
+}
+.list-1 ul li .a1:hover{
+    transform: scale(1.1);
+}
+
+/* --- MODIFIED: 页脚自适应 --- */
 #jiaobu {
-	width: 100%;
-	height: auto;
-	overflow: hidden;
-	text-align: center;
-	font-size: 14px;
-	padding: 30px 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    font-size: 14px;
+    padding: 30px 0;
+    margin-top: 60px;
+}
+#jiaobu p {
+    line-height: 1.8;
+    padding: 0 20px;
 }
 .foot{
-	width: 100%;
-	height: 250px;
-	background-color: rgba(128, 128, 128, 0.5);
-	margin-top: 40px;
-	margin-bottom: -25px;
-	border-radius:40px 40px 0px 40px;
+    max-width: 1200px;
+    width: 90%;
+    height: auto;
+    background-color: rgba(128, 128, 128, 0.5);
+    margin: 20px auto;
+    padding: 20px 0;
+    border-radius:40px 40px 0px 40px;
 }
 .foot1{
-	font-size: 1.5em;
-	color: rgb(128, 128, 128);
-	text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+    display: block;
 }
 .foot1 p{
-	padding: 50px;
-	text-align: center;
+    padding: 10px;
+    text-align: center;
 }
 .foot2{
-	font-size: 1em;
-	color:rgb(128, 128, 128) ;
-	text-align: center;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+    display: block;
 }
 .foot2 p{
-	padding: 40px;
-	text-align: center;
+    padding: 10px;
+    text-align: center;
 }
 hr{
-	width: 1000px;
-	margin: 0px auto;
+    width: 80%;
+    margin: 10px auto;
+    border-color: rgba(0,0,0,0.1);
 }
+
+/* --- 背景动画保持不变 --- */
 .radial-gradient-demo {
     background-color: #31f1f1; 
     background-image: radial-gradient(closest-side, rgb(112, 122, 255), rgba(35, 149, 255, 0)), radial-gradient(closest-side, rgb(250, 144, 184), rgba(197, 192, 195, 0)), radial-gradient(closest-side, rgb(138, 241, 74), rgba(254, 234, 131, 0)), radial-gradient(closest-side, rgb(255, 188, 100), rgba(170, 142, 245, 0));
@@ -253,7 +272,6 @@ hr{
     background-repeat: no-repeat;
     animation: 15s moiveAnimation infinite;
 }
-
 @keyframes moiveAnimation {
     0%,
     100% {
@@ -272,4 +290,53 @@ hr{
         background-size: 140vw 140vh, 100vw 130vh, 100vw 150vh, 130vw 110vh;
         background-position: -70vw -70vh, 0vw -10vh, 30vw -20vh, 20vw 30vh;
     }
+}
+
+/* --- NEW: 媒体查询 - 针对小屏幕设备 --- */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    #toubu {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+        margin-bottom: 30px;
+    }
+    #toubu .div_01 {
+        line-height: 1;
+        margin-bottom: 15px;
+    }
+    #toubu .div_02 ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #toubu .div_02 ul li a {
+        padding: 0 10px;
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 3.5em;
+    }
+    .inbanner {
+        padding: 60px 10px;
+    }
+    
+    /* 小屏幕下单列布局 */
+    .list-1 ul li {
+        width: 100%;
+        float: none;
+        margin-top: 30px;
+    }
+    .list-1 ul li img {
+        height: 180px;
+    }
+    .list-1 ul li p {
+        font-size: 16px;
+    }
+    
+    .foot1 { font-size: 1em; }
+    .foot2 { font-size: 0.8em; }
 }

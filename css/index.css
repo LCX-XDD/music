@@ -6,48 +6,53 @@ h4,
 ul,
 ol,
 p {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 ul,
 ol {
-	list-style: outside none none;
+    list-style: outside none none;
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
+
+/* --- MODIFIED: 头部导航栏自适应 --- */
 #toubu {
-	width: 1845px;
-	height: 60px;
-	overflow: hidden;
-	margin: 20px auto;
-	margin-bottom: 100px;
-	display: flex;
-	justify-content: space-between;
-	position: sticky;
-	top: 0px;
-	background-color: #888888;
-	box-shadow: 0px 5px 5px 2px  rgba(0, 0, 0, 0.5);
-	border-radius:35px 35px 0px 35px;
-	z-index: 1;
-	background: rgba(255, 255, 255, 0);
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
+    /* 使用 max-width 和百分比宽度 */
+    max-width: 1845px;
+    width: 95%; 
+    height: 60px;
+    overflow: hidden;
+    margin: 20px auto;
+    margin-bottom: 50px; /* 略微减少下边距，在小屏幕上更紧凑 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    background-color: #888888;
+    box-shadow: 0px 5px 5px 2px  rgba(0, 0, 0, 0.5);
+    border-radius:35px 35px 0px 35px;
+    z-index: 100; /* 提高 z-index 确保在轮播图之上 */
+    background: rgba(255, 255, 255, 0.8); /* 增加一点不透明度，效果更好 */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 .logo{
-	width: 20px;
-	margin: auto;
-	margin-right: 10px;
+    width: 20px;
+    margin: auto;
+    margin-right: 10px;
 }
 #toubu .div_01 {
-	line-height: 60px;
-	font-size: 20px;
-	font-weight: bold;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: bold;
     animation: 2s my-animation infinite;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-	margin: 0px 10px;
+    margin: 0px 20px; /* 增加左右边距 */
 }
 @keyframes my-animation {
     from {
@@ -57,27 +62,33 @@ a {
         color: rgb(0, 0, 255);
     }
 }
+
+/* --- MODIFIED: 导航链接布局 --- */
+#toubu .div_02 ul {
+    display: flex; /* 使用 flex 布局 */
+}
 #toubu .div_02 ul li {
-	display: inline-block;
-	line-height: 60px;
+    /* display: inline-block; */
+    line-height: 60px;
 }
 .ma{
-	margin: 0px 18px;
+    margin: 0px 10px; /* 在小屏幕上减少边距 */
 }
 #toubu .div_02 ul li a {
-	display: block;
-	width: 80px;
-	line-height: 60px;
-	color: #000;
-	font-size: 16px;
-	text-align: center;
+    display: block;
+    /* width: 80px;  移除固定宽度 */
+    padding: 0 15px; /* 使用 padding 控制宽度 */
+    line-height: 60px;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
 }
 #toubu .div_02 ul a.actives{
-	animation: 1s my-animation3 infinite ;
+    animation: 1s my-animation3 infinite ;
     animation-direction: alternate;
-	border-radius:35px 35px 0px 35px;
+    border-radius:35px 35px 0px 35px;
     transition-timing-function: linear;
-	transition-property: color;
+    transition-property: color;
 }
 @keyframes my-animation3 {
     from {
@@ -90,9 +101,9 @@ a {
 #toubu .div_02 ul li a:hover,.play a.actives {
     animation: 1s my-animation4 infinite ;
     animation-direction: alternate;
-	border-radius:35px 35px 0px 35px;
+    border-radius:35px 35px 0px 35px;
     transition-timing-function: linear;
-	transition-property: color;
+    transition-property: color;
 }
 @keyframes my-animation4 {
     from {
@@ -102,247 +113,258 @@ a {
         background-color: rgba(255, 255, 255 , 0.5);
     }
 }
+
+/* --- MODIFIED: 轮播图容器自适应 --- */
 #tupian {
-	width: 1000px;
-	height: 500px;
-	overflow: hidden;
-	margin: 20px auto 40px;
-	border-radius:50px 50px 0px 50px;
-	box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.24);
+    max-width: 1000px; /* 使用 max-width */
+    width: 95%; /* 占屏幕宽度的 95% */
+    height: auto; /* 高度自动 */
+    overflow: hidden;
+    margin: 20px auto 40px;
+    border-radius:50px 50px 0px 50px;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.24);
 }
 #banner {
-	width: 1000px;
-	height: 500px;
-	margin: 0px auto;
-	position: relative;
+    width: 100%; /* 宽度 100% 继承父容器 */
+    height: auto;
+    margin: 0px auto;
+    position: relative;
 }
 #banner #play {
-	width: 1000px;
-	height: 600px;
-	list-style: none;
-	position: absolute;
-	top: 0px;
-	left: 0px;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 #banner #play li {
-	display: none;
-	position: absolute;
-	top: 0px;
-	left: 0px;
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
 }
 #banner #play li img {
-	border-radius:50px 50px 0px 50px;
-	float: left;
+    border-radius:50px 50px 0px 50px;
+    width: 100%;   /* 图片宽度 100% */
+    height: 100%;  /* 图片高度 100% */
+    object-fit: cover; /* 保证图片不变形，覆盖整个容器 */
+}
+
+/* --- REMOVED: 重复且冲突的 #tupian img 样式 --- */
+/*
+#tupian img {
+    width: 100%;
+    height: 500px;
 }
 #tupian img {
-	width: 100%;
-	height: 500px;
+    width: 100%;
 }
-#tupian img {
-	width: 100%;
-}
+*/
+
+/* --- MODIFIED: 轮播图按钮位置 --- */
 #button {
-	position: absolute;
-	bottom: 20px;
-	left: 470px;
-	list-style: none;
+    position: absolute;
+    bottom: 20px;
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 水平居中 */
+    list-style: none;
+    padding: 0;
 }
 #button li {
-	margin-left: 10px;
-	float: left;
+    margin-left: 10px;
+    float: left;
+}
+#button li:first-child {
+    margin-left: 0;
 }
 #button li div {
-	width: 12px;
-	height: 12px;
-	background: #DDDDDD;
-	border-radius: 6px;
-	cursor: pointer;
+    width: 12px;
+    height: 12px;
+    background: #DDDDDD;
+    border-radius: 6px;
+    cursor: pointer;
 }
+
+/* --- MODIFIED: 主体内容区域自适应 --- */
 #section {
-	width: 1000px;
-	height: auto;
-	overflow: hidden;
-	margin: 0 auto;
+    max-width: 1200px; /* 使用 max-width */
+    width: 90%; /* 占屏幕宽度的 90% */
+    height: auto;
+    overflow: hidden;
+    margin: 40px auto;
 }
 #section .div_left {
-	width: 100%;
-	height: auto;
-	float: left;
+    width: 100%;
+    height: auto;
+    /* float: left;  不需要浮动 */
 }
 #section .div_left h2 {
-	width: 100%;
-	height: 40px;
-	border-bottom: 1px solid #ccc;
-	margin-bottom: 30px;
-	color: rgba(0, 0, 0, .8);
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+    color: rgba(0, 0, 0, .8);
+    line-height: 40px;
+}
+
+/* --- MODIFIED: 专辑项目布局 (使用 Flexbox) --- */
+#section .div_left .item-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%; /* 项目之间的间距 */
 }
 #section .div_left .item {
-	border-radius:50px 50px 0px 50px;
-	box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.24);
-	float:left;
-	width:31.3%;
-	margin:1%;
-	background: #fff;
-	margin-bottom: 25px;
-	overflow: hidden;
-	background: rgba(255, 255, 255, 0);
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
+    border-radius:50px 50px 0px 50px;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.24);
+    /* float:left; */
+    /* width:31.3%; */
+    flex: 1 1 280px; /* 关键: 弹性布局，最小宽度 280px */
+    margin: 1% 0; /* 只保留上下边距 */
+    background: #fff;
+    /* margin-bottom: 25px; */
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 #section .div_left .item a {
-	font-size: 14px;
-	color: #e54d42;
+    font-size: 14px;
+    color: #e54d42;
 }
-a {
-	text-decoration: none;
-}
+/* a { text-decoration: none; } 重复了 */
+
 #section .div_left .item div.pic {
-	width: 100%;
-	height: 385px;
-	overflow: hidden;
+    width: 100%;
+    height: 300px; /* 固定图片容器高度，使其统一 */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #section .div_left .item div.pic img {
-	width: auto;
-	height: 300px;
-	margin: 50px 5px;
-	border-radius: 35px 35px 0px 35px;
-	display: inline-block;
-	transition-property: all;
-	transition-duration: 0.3s;
-	transition-timing-function: linear;
-	
+    width: auto;
+    height: 80%; /* 图片高度为容器的 80% */
+    /* margin: 50px 5px;  使用 flex 居中，不再需要 margin */
+    border-radius: 35px 35px 0px 35px;
+    /* display: inline-block; */
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    
 }
 #section .div_left .item div.pic:hover img {
-	border-radius: 70% 70% 70% 70%;
-	display: inline-block;
-	transition-property: all;
-	transition-duration: 0s;
-	transition-timing-function: linear;
-	animation:hh1 6s linear 0s infinite; 
+    border-radius: 70% 70% 70% 70%;
+    /* display: inline-block; */
+    transition-property: all;
+    transition-duration: 0.5s; /* 延长一点动画时间 */
+    transition-timing-function: linear;
+    animation:hh1 6s linear 0s infinite; 
 }
 @keyframes hh1 {
-
-	from{
-		transform: rotate(0deg);
-	}
-	to{
-		transform: rotate(360deg);
-	}
+    from{ transform: rotate(0deg) scale(1.1); } /* 轻微放大 */
+    to{ transform: rotate(360deg) scale(1.1); }
 }
 #section .div_left .item .box {
-	margin: 0 auto;
-	padding: 25px;
-	height: 300px;
-	background-color: rgba(255, 255, 255, 0.8);
+    margin: 0 auto;
+    padding: 25px;
+    /* height: 300px;  移除固定高度 */
+    background-color: rgba(255, 255, 255, 0.8);
 }
 #section .div_left .item h3 {
-	font-size: 20px;
-	color: rgba(0, 0, 0, .8);
+    font-size: 20px;
+    color: rgba(0, 0, 0, .8);
 }
 #section .div_left .item h4 {
-	font-size: 12px;
-	color: rgba(0, 0, 0, .6);
-	padding-top: 10px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, .6);
+    padding-top: 10px;
 }
 #section .div_left .item p {
-	font-size: 14px;
-	color: rgba(0, 0, 0, .8);
-	line-height: 1.6;
-	padding: 30px 0;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .8);
+    line-height: 1.6;
+    padding: 15px 0;
 }
 #section .div_left .btn {
-	width: 100%;
-	height: 130px;
-	overflow: hidden;
-	text-align: center;
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+    text-align: center;
 }
 
 .btnn{
-	width: 60px;
-	height: 60px;
-	background-color: rgba(0, 0, 0, 0); ;
-	color: rgba(0, 0, 0, 0);
-	margin: 40px auto;
-	border-radius: 100%;
-	transition: all 0.5s linear;
-	box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.24);
-	text-align: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0); ;
+    color: rgba(0, 0, 0, 0);
+    margin: 40px auto;
+    border-radius: 100%;
+    transition: all 0.5s linear;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.24);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .btnn:hover{
-	border-radius: 35px 35px 35px 35px  ;
-	width: 300px;
-	background-color: rgba(0, 0, 0, 0); ;
-	color: cadetblue;
-}
-#jiaobu {
-	width: 100%;
-	height: auto;
-	overflow: hidden;
-	text-align: center;
-	font-size: 14px;
-	padding: 30px 0;
-}
-#jiaobu p {
-	line-height: 1.8;
-}
-.radial-gradient-demo {
-    background-color: #31f1f1; 
-    background-image: radial-gradient(closest-side, rgb(112, 122, 255), rgba(35, 149, 255, 0)), radial-gradient(closest-side, rgb(250, 144, 184), rgba(197, 192, 195, 0)), radial-gradient(closest-side, rgb(138, 241, 74), rgba(254, 234, 131, 0)), radial-gradient(closest-side, rgb(255, 188, 100), rgba(170, 142, 245, 0));
-    background-size: 130vw 130vh, 120vw 120vh, 100vw 150vh, 120vw 130vh;
-    background-position: -80vw -80vh, 30vw -20vh, -20vw 20vh, 30vw 20vh;
-    background-repeat: no-repeat;
-    animation: 15s moiveAnimation infinite;
-}
-#jiaobu {
-	width: 100%;
-	height: auto;
-	overflow: hidden;
-	text-align: center;
-	font-size: 14px;
-	padding: 30px 0;
+    border-radius: 35px; /* 简化写法 */
+    width: 150px; /* 适当缩小宽度 */
+    background-color: rgba(0, 0, 0, 0); ;
+    color: cadetblue;
 }
 
-#jiaobu p {
-	line-height: 1.8;
-}
+/* --- MODIFIED: 页脚自适应 --- */
 #jiaobu {
-	width: 100%;
-	height: auto;
-	overflow: hidden;
-	text-align: center;
-	font-size: 14px;
-	padding: 30px 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    font-size: 14px;
+    padding: 30px 0;
+}
+#jiaobu p {
+    line-height: 1.8;
+    padding: 0 20px; /* 增加左右内边距，防止文字贴边 */
 }
 .foot{
-	width: 100%;
-	height: 250px;
-	background-color: rgba(128, 128, 128, 0.5);
-	margin-top: 40px;
-	margin-bottom: -25px;
-	border-radius:40px 40px 0px 40px;
+    width: 90%; /* 占屏幕宽度的 90% */
+    max-width: 1200px;
+    height: auto; /* 高度自动 */
+    background-color: rgba(128, 128, 128, 0.5);
+    margin: 40px auto 20px; /* 居中并调整边距 */
+    padding: 20px 0;
+    border-radius:40px 40px 0px 40px;
 }
 .foot1{
-	font-size: 1.5em;
-	color: rgb(128, 128, 128);
-	text-align: center;
+    font-size: 1.2em; /* 适当缩小字体 */
+    color: #333; /* 加深颜色，提高可读性 */
+    text-align: center;
+    display: block;
 }
 .foot1 p{
-	padding: 50px;
-	text-align: center;
+    padding: 20px 10px;
+    text-align: center;
 }
 .foot2{
-	font-size: 1em;
-	color:rgb(128, 128, 128) ;
-	text-align: center;
+    font-size: 0.9em; /* 适当缩小字体 */
+    color: #555; /* 加深颜色 */
+    text-align: center;
+    display: block;
 }
 .foot2 p{
-	padding: 40px;
-	text-align: center;
+    padding: 10px;
+    text-align: center;
 }
 hr{
-	width: 1000px;
-	margin: 0px auto;
+    width: 80%; /* 宽度改为 80% */
+    margin: 20px auto;
+    border-color: rgba(0,0,0,0.1);
 }
+
+/* --- 背景动画保持不变 --- */
 .radial-gradient-demo {
     background-color: #31f1f1; 
     background-image: radial-gradient(closest-side, rgb(112, 122, 255), rgba(35, 149, 255, 0)), radial-gradient(closest-side, rgb(250, 144, 184), rgba(197, 192, 195, 0)), radial-gradient(closest-side, rgb(138, 241, 74), rgba(254, 234, 131, 0)), radial-gradient(closest-side, rgb(255, 188, 100), rgba(170, 142, 245, 0));
@@ -369,4 +391,43 @@ hr{
         background-size: 140vw 140vh, 100vw 130vh, 100vw 150vh, 130vw 110vh;
         background-position: -70vw -70vh, 0vw -10vh, 30vw -20vh, 20vw 30vh;
     }
+}
+
+/* --- NEW: 媒体查询 - 针对小屏幕设备 --- */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    #toubu {
+        flex-direction: column; /* 垂直排列 */
+        height: auto;
+        padding: 15px 0;
+        margin-bottom: 30px;
+    }
+    #toubu .div_01 {
+        line-height: 1;
+        margin-bottom: 15px;
+    }
+    #toubu .div_02 ul {
+        flex-wrap: wrap; /* 导航项可换行 */
+        justify-content: center;
+    }
+    #toubu .div_02 ul li a {
+        padding: 0 10px;
+        font-size: 14px;
+    }
+
+    #tupian, #section {
+        width: 95%;
+    }
+    
+    #section .div_left .item {
+        flex: 1 1 100%; /* 在小屏幕上，每个项目占满一行 */
+        margin-bottom: 20px;
+    }
+    
+    .foot1 { font-size: 1em; }
+    .foot2 { font-size: 0.8em; }
+    .foot1 p, .foot2 p { padding: 10px 5px; }
 }
