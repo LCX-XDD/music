@@ -3,6 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>音乐阁 登录</title>
+<!-- 新增的 Viewport 标签 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="../img/favicon.svg">
 <link rel="stylesheet" href="../css/login.css">
 </head>
@@ -21,20 +23,21 @@
 <main class="login_bg">
   <section class="login_box">
 <!--登录注册模块开始-->
-<div class="fr login_b2" style="position: relative;">
-  <ul class="login_b2_ul">
-      <li class="active">登录</li>
-  </ul>
-  <form action="../index.html" method="get">
-      <input type="text" placeholder="请输入账号" />
-      <input type="password" placeholder="请输入密码" />
-      <a href="password.html"><span class="fr login_b2_span1">忘记密码</span></a>
-      <span class="fr login_b2_span">还没账号？<a href="zhuce.html">马上注册</a></span>
-      <button class="popup_box_1">登录</button>
-  </form>
-</div>
+    <!-- MODIFIED: 添加一个类名 'login_form_container' 用于样式控制 -->
+    <div class="fr login_b2 login_form_container" style="position: relative;">
+      <ul class="login_b2_ul">
+          <li class="active">登录</li>
+      </ul>
+      <form action="../index.html" method="get">
+          <input type="text" placeholder="请输入账号" />
+          <input type="password" placeholder="请输入密码" />
+          <a href="password.html"><span class="fr login_b2_span1">忘记密码</span></a>
+          <span class="fr login_b2_span">还没账号？<a href="zhuce.html">马上注册</a></span>
+          <button class="popup_box_1">登录</button>
+      </form>
+    </div>
 <!--登录注册模块结束-->
-</section>
+  </section>
 </main>
 <div id="jiaobu">
   <div class="foot">
